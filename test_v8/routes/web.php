@@ -44,4 +44,7 @@ Route::group(['prefix'=>'account'],function(){
     Route::get('/login',[App\Http\Controllers\Testcontroller::class,'login']);
 });
 
-Route::get('/product',[App\Http\Controllers\Testcontroller::class,'product']);
+Route::get('/product',[App\Http\Controllers\Testcontroller::class,'product'])->name('product.index');
+
+Route::get('/test/create',[App\Http\Controllers\Testcontroller::class,'create']);
+Route::post('/test/store',[App\Http\Controllers\Testcontroller::class,'store'])->name('test.store');
