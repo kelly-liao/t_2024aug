@@ -42,5 +42,6 @@ route::get('/account/login',[App\Http\Controllers\Testcontroller::class,'login']
 route::group(['prefix'=>'account'],function(){
     route::get('/register',[App\Http\Controllers\Testcontroller::class,'register']);
     route::get('/login',[App\Http\Controllers\Testcontroller::class,'login']);
-    
 });
+
+route::get('/product',[App\Http\Controllers\Testcontroller::class,'product']);

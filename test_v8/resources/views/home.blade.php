@@ -1,4 +1,15 @@
-hi  welcome to laravel 8
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- user id is :{{ $i_d ?? '' }} -->
+         @foreach($products as $product)
+            {{$product}}
+         @endforeach
+    </body>
+</html>
 <!-- @extends('layouts.app')
 
 @section('content')
