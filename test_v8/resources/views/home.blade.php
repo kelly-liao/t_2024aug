@@ -5,9 +5,21 @@
     </head>
     <body>
         <!-- user id is :{{ $i_d ?? '' }} -->
+        <!-- way 1 -->
+        <!-- @if(count ($products))
          @foreach($products as $product)
             {{$product}}
          @endforeach
+        @else
+            <p>No any products to show</p>
+        @endif  -->
+
+        <!-- way2 -->
+        @forelse($products as $product)
+            {{ $product }}
+        @empty
+        <p>No any products to show</p>
+        @endforelse
     </body>
 </html>
 <!-- @extends('layouts.app')
