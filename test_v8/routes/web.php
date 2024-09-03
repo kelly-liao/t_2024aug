@@ -48,3 +48,6 @@ Route::get('/product',[App\Http\Controllers\Testcontroller::class,'product'])->n
 
 Route::get('/test/create',[App\Http\Controllers\Testcontroller::class,'create']);
 Route::post('/test/store',[App\Http\Controllers\Testcontroller::class,'store'])->name('test.store');
+
+//posts
+Route::get('posts/store',[App\Http\Controllers\PostController::class,'store']);
