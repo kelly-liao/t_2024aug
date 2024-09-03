@@ -50,4 +50,10 @@ Route::get('/test/create',[App\Http\Controllers\Testcontroller::class,'create'])
 Route::post('/test/store',[App\Http\Controllers\Testcontroller::class,'store'])->name('test.store');
 
 //posts
-Route::get('posts/store',[App\Http\Controllers\PostController::class,'store']);
+Route::get('/posts/store',[App\Http\Controllers\PostController::class,'store']);
+Route::get('/posts',[App\Http\Controllers\PostController::class,'index']);
+Route::get('/post/{id}',[App\Http\Controllers\PostController::class,'show']);
+
+Route::get('/post/update/{id}',[App\Http\Controllers\PostController::class,'update']);
+Route::get('/post/delete/{id}',[App\Http\Controllers\PostController::class,'destory']);
+Route::get('/show',[App\Http\Controllers\PostController::class,'getPost']);
